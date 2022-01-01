@@ -6,11 +6,11 @@ def BinarySearch(arr,value):
         while(min_index<max_index):
 
 
-            mid_index = (min_index + max_index)/2
-            if(mid_index==value):
+            mid_index = int((min_index + max_index)/2)
+            if(arr[mid_index]==value):
                 return mid_index
             else:
-                if(value>mid_index):
+                if(value>arr[mid_index]):
                     min_index=mid_index
             
                 else:
