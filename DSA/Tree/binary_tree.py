@@ -13,7 +13,20 @@ def preorderTraverse(rootNode):
     preorderTraverse(rootNode.rightchild)
 
 
+def inordertraverse(rootNode):
+    if not rootNode:
+        return
+    inordertraverse(rootNode.leftchild)
+    print(rootNode.data)
+    inordertraverse(rootNode.rightchild)
 
+
+def postordertraverse(rootNode):
+    if not rootNode:
+        return
+    postordertraverse(rootNode.leftchild)
+    postordertraverse(rootNode.rightchild)
+    print(rootNode.data)
 
 rootNode = TreeNode("Menu")
 food = TreeNode("Food")
@@ -36,5 +49,9 @@ print(rootNode.__dict__)
 
 preorderTraverse(rootNode)
 
+print("\n")
+inordertraverse(rootNode)
+print("\n")
+postordertraverse(rootNode)
 
 
