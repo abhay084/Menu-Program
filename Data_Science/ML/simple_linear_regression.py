@@ -10,6 +10,18 @@ y = dataset['Salary']
 x = dataset['YearsExperience']
 
 
+X = x.values.reshape(-1,1)
+
+print(X.shape)
+
+model = LinearRegression()
+model.fit(X,y)
+print(model.coef_)
+
+print(model.intercept_)
+
+
+print(model.predict[[2]])
 
 
 
